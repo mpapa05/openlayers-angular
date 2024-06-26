@@ -4,6 +4,18 @@
 <main>
   <div class="left-bar"></div>
   <div id="ol-map" class="map-container"></div>
+  <div style="position: absolute;">
+      <mat-form-field>
+        <mat-label>Select a shape</mat-label>
+        <mat-select (selectionChange)="onShapeSelect($event.value)">
+          <mat-option value="Circle">Circle</mat-option>
+          <mat-option value="Square">Square</mat-option>
+          <mat-option value="Box">Box</mat-option>
+          <mat-option value="Star">Star</mat-option>
+          <mat-option value="None">None</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
 </main>
 <footer>
   Footer
